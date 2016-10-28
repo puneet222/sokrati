@@ -1,0 +1,23 @@
+
+<html>
+<head>
+    <script type="text/javascript">
+    document.getElementById("product-buy").addEventListener("click" , function(){
+        var product_category = document.getElementsByClassName("fl mt3");
+        pcat = product_category[0].innerText ;
+        console.log("Product_category = " + pcat) ;
+//        var product_name ;
+        var product_price ;
+        var product_name = document.getElementsByClassName("prd-name") ;
+        pname = product_name[0].innerHTML ;
+        console.log("Product_name = " + pname) ;
+         var product_price  = document.getElementsByClassName("pdp-sp"). 
+         pprice = product_price ;
+        console.log("product-price = " + pprice) ;
+    }) ;
+    </script>
+    </head>
+    <body>
+    <input type="button" id="test" value="ppppp"/>
+    </body>
+</html>

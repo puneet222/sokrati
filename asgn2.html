@@ -1,0 +1,47 @@
+
+<html>
+<head>
+    <script type="text/javascript">
+        
+    document.getElementById("product-buy").addEventListener("click" , function(){
+        // getting the total price
+        document.addEventListener("DOMContentLoaded", function(event) { 
+        var tprice ;
+        var tab = document.getElementById("shopping-cart-totals-table") ;
+        var tpr = tab.getElementsByClassName("price") ;
+        tprice = tpr[1].innerText ;
+        console.log(tprice) ;
+        // got the total price
+        
+        var out = document.getElementById("shopping-cart-table") ;
+        var orow = out.getElementsByClassName("gry-bg") ;
+        var l = orow.length ;
+        // get the length of the row 
+        var items = [] ;
+        for(var i = 1 ;  i< l ; i = i + 2)
+            {
+                var nm = orow[i].getElementsByClassName("product-name") ;
+                var name = nm[0].innerText ;
+               var qt = orow[i].getElementsByClassName("number-only input-text qty") ;
+                var qty = qt[0].defaultValue ;
+                // got the quantity 
+                var arrprice = orow[i].getElementsByClassName("price") ;
+                // got the array price
+                var unitp = arrprice[0].innerHTML ;
+                var totalp = arrprice[1].innerHTML ;
+                
+                var pushi = {product_name : name , product_quantity : qty , unit_price : unitp , total_price : totalp} ;
+                
+                items.push(pushi) ;
+            }
+        console.log(items) ;
+        console.log(tprice) ;
+        }) ;
+    }) ;
+        }) ;
+    </script>
+    </head>
+    <body>
+    <input type="button" id="test" value="ppppp"/>
+    </body>
+</html>
